@@ -1,0 +1,353 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  background-image: url('images/background-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #222222;
+  padding-top: 20px;
+  border-right: 2px groove ghostwhite;
+}
+
+.sidebar-logo {
+  display: block;
+  max-width: 80%;
+  margin: 0 auto 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+  color: #007bff;
+}
+
+.container {
+  max-width: 1000px;
+  margin-top: 100px;
+  margin-left: calc(220px + (100% - 200px - 1000px) / 2);
+  margin-right: calc(20px + (100% - 200px - 1000px) / 2);
+  margin-bottom: 100px;
+  padding: 20px;
+  background-color: #fff;
+  border: 2px groove ghostwhite;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sortContainer {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.sortContainer label {
+  margin-right: 10px;
+}
+
+.sortContainer select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.addTaskBtn{
+  text-align: center;
+}
+
+.addTaskBtn button{
+  background-color:darkseagreen;
+}
+
+.addTaskBtn button:hover{
+  background-color:#4CAF50;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+.task-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-container {
+  display: flex;
+}
+
+.task-detail {
+  margin-bottom: 5px;
+}
+
+.task-name {
+  font-weight: bold;
+}
+
+.course {
+  color: #007bff;
+}
+
+.date {
+  font-style: italic;
+}
+
+.urgency {
+  color: #f44336;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  padding: 8px 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  margin: auto;
+}
+
+.modify-button{
+  background-color: #4CAF50;
+}
+
+.modify-button:hover {
+  border: 1px solid green;
+  background-color: #45a049;
+}
+
+.delete-button {
+  background-color: #f9f9f9;
+}
+
+.delete-button img {
+  border: 1px solid gray;
+}
+
+.delete-button img:hover {
+  border: 1px solid red;
+}
+
+#taskModal .modal-content {
+  max-width: 400px;
+}
+
+#taskModal h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#taskModal label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#taskModal input[type="text"],
+#taskModal input[type="checkbox"],
+#taskModal input[type="date"] {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#taskModal button[type="submit"] {
+  width: 100%;
+  background-color: darkseagreen;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#taskModal button[type="submit"]:hover {
+  background-color: #4CAF50;
+}
+
+#modifyModal .modal-content {
+  max-width: 400px;
+}
+
+#modifyModal h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#modifyModal label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#modifyModal input[type="text"],
+#modifyModal input[type="checkbox"],
+#modifyModal input[type="date"] {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#modifyModal button[type="submit"] {
+  width: 100%;
+  background-color: darkseagreen;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#modifyModal button[type="submit"]:hover {
+  background-color: #4CAF50;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: calc(1000px - (1200px - 1000px) * 0.1);
+    margin-left: 220px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container{
+    max-width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding-top: 10px;
+    position: static;
+  }
+
+  .sidebar-logo {
+    display: block;
+    max-width: 50%;
+    margin: 0 auto 20px;
+  }
+
+  .sidebar h2 {
+    text-align: center;
+  }
+
+  .sidebar ul {
+    padding-left: 0;
+  }
+
+  .sidebar ul li {
+    text-align: center;
+  }
+
+  .modal-content {
+    width: 90%;
+    margin: 10% auto;
+  }
+}

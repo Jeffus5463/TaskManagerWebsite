@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>main-page</title>
+    <link rel="stylesheet" href="main-page.css">
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="sidebar">
+            <img src="images/task-manager-logo.png" alt="Task Manager Logo" class="sidebar-logo">
+            <ul>
+                <li><a href="main-page.html">Home</a></li>
+                <li><a href="account.html">Account</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </div>
+    
+        <div class="container">
+            <h1>Task Manager</h1>
+    
+            <div class="sortContainer">
+                <label for="sortSelect">Sort by:</label>
+                <select id="sortSelect">
+                    <option value="asc">(Date) Ascending</option>
+                    <option value="desc">(Date) Descending</option>
+                </select>
+            </div>
+            
+            <div id="taskModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Add Task</h2>
+                    <form id="taskForm">
+                        <label for="taskName">Task Name:</label>
+                        <input type="text" id="taskName" name="taskName" required maxlength="25"><br>
+    
+                        <label for="course">Course:</label>
+                        <input type="text" id="course" name="course" required maxlength="25"><br>
+    
+                        <label for="taskDate">Date:</label>
+                        <input type="date" id="taskDate" name="taskDate" required><br>
+    
+                        <label for="urgent">Urgent:</label>
+                        <input type="checkbox" id="urgent" name="urgent"><br>
+                        <button type="submit">Add</button>
+                    </form>
+                </div>
+            </div>
+    
+            <div id="modifyModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Modify Task</h2>
+                    <form id="modifyTaskForm">
+                        <input type="hidden" id="modifyTaskId" name="modifyTaskId">
+    
+                        <label for="modifyTaskName">Task Name:</label>
+                        <input type="text" id="modifyTaskName" name="modifyTaskName" required maxlength="25"><br>
+    
+                        <label for="modifyCourse">Course:</label>
+                        <input type="text" id="modifyCourse" name="modifyCourse" required maxlength="25"><br>
+    
+                        <label for="modifyTaskDate">Date:</label>
+                        <input type="date" id="modifyTaskDate" name="modifyTaskDate" required><br>
+    
+                        <label for="modifyUrgent">Urgent:</label>
+                        <input type="checkbox" id="modifyUrgent" name="modifyUrgent"><br>
+                        <button id="saveChanges" type="submit">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+    
+            <ul id="taskList"></ul>
+            <div class="addTaskBtn">
+                <button id="addTaskBtn">Add Task</button>
+            </div>
+        </div>
+    </div>
+    <script src="main-page.js"></script>
+</body>
+</html>
