@@ -1,0 +1,68 @@
+.logRegForm {
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px groove ghostwhite;
+    border-radius: 10px;
+}
+
+.logRegForm h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logRegForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.logRegForm input[type="text"],
+.logRegForm input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.logRegForm button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logRegForm button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.logRegForm p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logRegForm a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.logRegForm a:hover {
+    text-decoration: underline;
+}
+
+#error-message {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#logRegBtn{
+    background-color: #8FBC8F;
+}
+
+#logRegBtn:hover{
+    background-color: #45a049;
+}
