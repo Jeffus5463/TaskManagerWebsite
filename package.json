@@ -11,8 +11,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
+=======
+>>>>>>> 6920664a44bf12a8a64469dfa46b012fa544a47a
     "express": "^4.19.2",
     "express-session": "^1.18.0",
     "sqlite3": "^5.1.7"
