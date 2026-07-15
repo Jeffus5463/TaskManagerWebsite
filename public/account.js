@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // When user clicks logout in the sidebar
     logoutBtn.addEventListener('click', function(event) {
         event.preventDefault();
-<<<<<<< HEAD
 
         // Destroy the session on the server, then redirect
         fetch('/logout', { method: 'POST' })
@@ -20,9 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 sessionStorage.removeItem('username');
                 window.location.href = 'index.html';
             });
-=======
-        window.location.href = 'index.html';
->>>>>>> 6920664a44bf12a8a64469dfa46b012fa544a47a
     });
 
     // When user clicks on change password button
